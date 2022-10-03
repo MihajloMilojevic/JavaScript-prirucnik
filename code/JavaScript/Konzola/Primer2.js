@@ -1,5 +1,4 @@
 document.getElementById("log").onclick = function () {
-	console.clear();
 	console.log("####### CONSOLE.LOG #########")
 	console.log(Math.PI);
 	console.log("Hello Console");

@@ -1,5 +1,4 @@
 document.getElementById("trace").onclick = function() {
-	console.clear();
 	console.log("##### CONSOLE.TRACE");
 	function a() { console.trace("GDE? - CALL STACK"); }
 	function b() { a(); }

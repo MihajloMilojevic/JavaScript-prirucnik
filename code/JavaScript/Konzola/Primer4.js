@@ -1,5 +1,4 @@
 document.getElementById("error").onclick = function() {
-	console.clear();
 	console.log("###### CONSOLE.ERROR ######");
 	console.error(new Error("GREŠKA"));
 	try {
