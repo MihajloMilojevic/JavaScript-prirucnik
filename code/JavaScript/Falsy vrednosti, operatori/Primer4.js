@@ -3,9 +3,9 @@ const data = [
         id: 1,
         naziv: "Test 1",
         slike: [
-            "slika1.jpg",
-            "slika2.jpg",
-            "slika3.jpg",
+            {src: "/slika1.jpg", alt: "Slika 1"},
+            {src: "/slika2.jpg", alt: "Slika 2"},
+            {src: "/slika3.jpg", alt: "Slika 3"}
         ],
         boja: {
             osnovna: "crna",
@@ -23,7 +23,7 @@ const data = [
         id: 3,
         naziv: "Test 3",
         slike: [
-            "slika7.jpg"
+            {src: "/slika7.png", alt: "Slika 7"}
         ]
     },
 ]
@@ -31,7 +31,12 @@ const data = [
 for (const proizvod of data) {
     console.group(proizvod.naziv);
     
-    
+    console.log(proizvod.id);
+    console.log(proizvod.naziv);
+
+    console.group("Slike")
+        
+    console.groupEnd("Slike");
 
     console.groupEnd(proizvod.naziv)
 }
