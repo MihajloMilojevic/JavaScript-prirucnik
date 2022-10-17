@@ -32,21 +32,21 @@ const data = [
 ]
 
 for (const proizvod of data) {
-    console.group(proizvod.naziv);
+    console.group(proizvod.naziv );
     
     console.log(proizvod.id);
     console.log(proizvod.naziv);
 
     console.group("Slike")
-    for (const slika of proizvod.slike) {
-        console.log("Alt: ", slika.alt);
-        console.log("Src: ", slika.src);
+    for (const slika of proizvod?.slike ?? []) {
+        console.log("Alt: ", slika?.alt ?? "/");
+        console.log("Src: ", slika?.src ?? "/");
     }
     console.groupEnd("Slike");
 
     console.group("Boje")
-    console.log("Osnovna: ", proizvod.boja.osnovna);
-    console.log("Dodatna: ", proizvod.boja.dodatna);
+    console.log("Osnovna: ", proizvod?.boja?.osnovna ?? "/");
+    console.log("Dodatna: ", proizvod?.boja?.dodatna ?? "/");
     console.groupEnd("Boje");
 
     console.groupEnd(proizvod.naziv)
